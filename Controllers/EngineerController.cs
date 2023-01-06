@@ -17,7 +17,7 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
-      return View(_db.Engineer.ToList());
+      return View(_db.Engineers.ToList());
     }
 
     public ActionResult Create()
@@ -29,7 +29,7 @@ namespace Factory.Controllers
     [HttpPost]
     public ActionResult Create(Engineer engineer, int MachineId)
     {
-      _db.Engineer.Add(engineer);
+      _db.Engineers.Add(engineer);
       _db.SaveChanges();
       if (MachineId != 0)
       {
@@ -41,7 +41,7 @@ namespace Factory.Controllers
 
     public ActionResult Details(int id)
     {
-      var thisEngineer = _db.Engineer
+      var thisEngineer = _db.Engineers
         .Include(engineer => engineer.JoinEntities)
         .ThenInclude(join => join.Machine)
         .FirstOrDefault(engineer => engineer.EngineerId == id);
@@ -50,7 +50,7 @@ namespace Factory.Controllers
 
     public ActionResult Edit(int id)
     {
-      var thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.EngineerId == id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View(thisEngineer);
     }
@@ -69,7 +69,7 @@ namespace Factory.Controllers
 
     public ActionResult AddMachine(int id)
     {
-      var thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.EngineerId == id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
       return View(thisEngineer);
     }
@@ -87,15 +87,15 @@ namespace Factory.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.EngineerId == id);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisEngineer = _db.Engineer.FirstOrDefault(engineer => engineer.EngineerId == id);
-      _db.Engineer.Remove(thisEngineer);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      _db.Engineers.Remove(thisEngineer);
       _db.SaveChanges();
       return RedirectToAction("Index", "Home");
     }
