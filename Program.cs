@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Factory.Models;
 using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+
 
 namespace Factory
 {
@@ -9,6 +12,7 @@ namespace Factory
   {
     static void Main(string[] args)
     {
+      
       WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
       
       builder.Services.AddServerSideBlazor();
