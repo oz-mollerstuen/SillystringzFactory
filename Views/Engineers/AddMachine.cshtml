@@ -1,0 +1,23 @@
+
+
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<div class="form">
+  <h2>New Machine</h2>
+
+  <h4>Select Machine From List: @Html.DisplayFor(model => model.Name)</h4>
+
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.EngineerId);
+
+    @Html.Label("Select machine");
+    @Html.DropDownList("MachineId");
+
+    <input type="submit" value="Save" />
+  }
+</div>

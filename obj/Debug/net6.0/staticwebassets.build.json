@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M2VMxnkpsRzrFBFZEKFXoBGyOyzUrE+BFOTn6JOq7e4=",
+  "Hash": "WuLzRi6qMro6AfyravOKfNcHtgFXcW3XsLLS8BH5/a0=",
   "Source": "FactoryApp",
   "BasePath": "_content/FactoryApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FactoryApp/wwwroot",
       "Source": "FactoryApp",
-      "ContentRoot": "/Users/admin/Desktop/FactoryApp.Solution/Factory/wwwroot/",
+      "ContentRoot": "/Users/admin/Desktop/Factory/Factory/wwwroot/",
       "BasePath": "_content/FactoryApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/admin/Desktop/FactoryApp.Solution/Factory/wwwroot/css/styles.css",
+      "Identity": "/Users/admin/Desktop/Factory/Factory/wwwroot/css/styles.css",
       "SourceId": "FactoryApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/admin/Desktop/FactoryApp.Solution/Factory/wwwroot/",
+      "ContentRoot": "/Users/admin/Desktop/Factory/Factory/wwwroot/",
       "BasePath": "_content/FactoryApp",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
