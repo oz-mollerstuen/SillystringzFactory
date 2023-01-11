@@ -13,7 +13,7 @@ namespace Factory.Models
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseLazyLoadingProxies();
+      // optionsBuilder.UseLazyLoadingProxies();
     }
   }
 }

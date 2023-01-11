@@ -62,5 +62,3 @@
 /Users/admin/Desktop/Factory/Factory/obj/Debug/net6.0/ref/FactoryApp.dll
 /Users/admin/Desktop/Factory/Factory/bin/Debug/net6.0/MySqlConnector.dll
 /Users/admin/Desktop/Factory/Factory/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
-/Users/admin/Desktop/Factory/Factory/bin/Debug/net6.0/Castle.Core.dll
-/Users/admin/Desktop/Factory/Factory/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Proxies.dll
